@@ -1,4 +1,4 @@
-const { defaultTheme } = require('react-daisyui/dist/constants')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,6 +13,28 @@ module.exports = {
         sans: ['Work Sans', ...defaultTheme.fontFamily.sans],
       },
     },
+  },
+  daisyui: {
+    styled: true,
+    themes: [
+      {
+        dark: {
+          primary: '#0D112B',
+          'primary-focus': '#0D112B',
+          'primary-content': '#E1E3E3',
+          'base-100': '#090B15',
+          'base-200': '#24262C',
+          'base-300': '#303239',
+          'base-content': '#E1E3E3',
+          success: '#5ADB82',
+          'success-content': '#000000',
+          warning: '#F6A414',
+          'warning-content': '#FFFFFF',
+          error: '#F87272',
+          'error-content': '#FFFFFF',
+        },
+      },
+    ],
   },
   plugins: [require('daisyui')],
 }
