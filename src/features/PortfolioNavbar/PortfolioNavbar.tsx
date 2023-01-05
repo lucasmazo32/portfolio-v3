@@ -6,7 +6,7 @@ import { PortfolioNavbarStart } from './PortfolioNavbarStart'
 
 export const PortfolioNavbar: FC = () => {
   return (
-    <Navbar className='px-8'>
+    <Navbar className='px-4'>
       <PortfolioNavbarStart />
       <PortfolioNavbarCenter />
       <PortfolioNavbarEnd />

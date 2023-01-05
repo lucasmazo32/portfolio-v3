@@ -3,7 +3,7 @@ import { Button, Navbar } from 'react-daisyui'
 
 export const PortfolioNavbarCenter: FC = () => {
   return (
-    <Navbar.Center>
+    <Navbar.Center className="md:inline-flex hidden">
       <Button
         color="ghost"
         className="!font-semibold"
