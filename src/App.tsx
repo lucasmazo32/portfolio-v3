@@ -1,7 +1,14 @@
 import { FC } from 'react'
 import { Theme } from 'react-daisyui'
 import { useAppSelector } from './app/hooks'
-import { ComputerCraft, CurrentExperience, Experiences, Hero, PortfolioNavbar } from './features'
+import {
+  ComputerCraft,
+  CurrentExperience,
+  Experiences,
+  Hero,
+  PortfolioNavbar,
+  Footer,
+} from './features'
 
 const App: FC = () => {
   const theme = useAppSelector((state) => state.app.theme)
@@ -14,6 +21,7 @@ const App: FC = () => {
         <ComputerCraft />
         <CurrentExperience />
         <Experiences />
+        <Footer />
       </Theme>
     </div>
   )

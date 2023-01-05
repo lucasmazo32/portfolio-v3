@@ -1,9 +1,28 @@
-import { FC } from 'react'
+import { FC, useEffect, useRef } from 'react'
+import { updateGoToAbout } from '../../app/app'
+import { useAppDispatch } from '../../app/hooks'
 import ComputerIcon from '../../assets/computer.png'
 
 export const ComputerCraft: FC = () => {
+  const computerCraftRef = useRef<HTMLDivElement>(null)
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    if (computerCraftRef.current) {
+      const curr = computerCraftRef.current
+      dispatch(
+        updateGoToAbout(() => {
+          curr.scrollIntoView({ behavior: 'smooth' })
+        }),
+      )
+    }
+  }, [computerCraftRef.current])
+
   return (
-    <div className="flex xl:flex-row flex-col xl:mt-40 mt-6 xl:ml-20 xl:mr-28 mx-4 items-center">
+    <div
+      ref={computerCraftRef}
+      className="flex xl:flex-row flex-col lg:pt-40 pt-6 xl:ml-20 xl:mr-28 mx-4 items-center"
+    >
       <img
         src={ComputerIcon}
         className="xl:w-[500px] w-96"
@@ -22,3 +41,5 @@ export const ComputerCraft: FC = () => {
     </div>
   )
 }
+
+ComputerCraft.displayName = 'ComputerCraft'

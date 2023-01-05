@@ -23,7 +23,7 @@ module.exports = {
           'primary-focus': '#0D112B',
           'primary-content': '#E1E3E3',
           'base-100': '#090B15',
-          'base-200': '#353545',
+          'base-200': '#121522',
           'base-300': '#303239',
           'base-content': '#E1E3E3',
           success: '#5ADB82',

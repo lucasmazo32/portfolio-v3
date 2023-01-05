@@ -15,7 +15,7 @@ export const ExperienceCard: FC<ExperienceCardProps> = ({
   experience,
 }) => {
   return (
-    <Card className="p-6">
+    <Card className="p-6 bg-base-200">
       <img
         src={logo}
         className="w-6 h-6 mb-6"
