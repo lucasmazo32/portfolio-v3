@@ -5,3 +5,7 @@
 .btn {
   @apply normal-case text-lg font-normal;
 }
+
+.current-card {
+  background: linear-gradient(117.05deg, #7c1ff9 31.66%, #04aef7 97.96%);
+}
