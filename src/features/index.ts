@@ -1,5 +1,6 @@
 export * from './ComputerCraft'
 export * from './CurrentExperience'
+export * from './DrawerMenu'
 export * from './ExperienceCard'
 export * from './Footer'
 export * from './Hero'

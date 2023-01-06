@@ -20,8 +20,11 @@ export const CurrentExperience: FC = () => {
   }, [experienceCraftRef.current])
 
   return (
-    <Card ref={experienceCraftRef} className="current-card xl:p-24 px-4 py-10 xl:flex-row items-center xl:mx-28 mx-4 xl:mt-24 my-10 xl:mb-28">
-      <div className="xl:mb-0 mb-8">
+    <Card
+      ref={experienceCraftRef}
+      className="current-card xl:p-24 px-4 py-10 xl:flex-row items-center xl:mx-28 mx-4 xl:mt-24 my-10 xl:mb-28"
+    >
+      <div className="xl:mb-0 mb-8 text-neutral">
         <h3>Senior FrontEnd Engineer</h3>
         <h4 className="text-5xl font-bold mt-6">Stanza</h4>
         <h5 className="text-xl mt-2">

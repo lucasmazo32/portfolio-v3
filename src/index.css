@@ -6,6 +6,19 @@
   @apply normal-case text-lg font-normal;
 }
 
+.btn-child-block > .btn {
+  @apply w-full;
+}
+
+.h-screen-cust {
+  @apply h-screen;
+  max-height: -webkit-fill-available;
+}
+
+.dropdown-top {
+  @apply dropdown-end;
+}
+
 .current-card {
   background: linear-gradient(117.05deg, #7c1ff9 31.66%, #04aef7 97.96%);
 }

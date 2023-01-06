@@ -1,22 +1,23 @@
 import { createSlice, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit'
-
-type themeOptions = 'dark' | 'light'
+import { ThemeOptions } from '../types'
 
 export interface AppSliceState {
-  theme: themeOptions
+  theme: ThemeOptions
+  sideMenuOpen: boolean
   goToAbout?: Function
   goToExperience?: Function
   goToContact?: Function
 }
 
 const initialState: AppSliceState = {
-  theme: 'dark',
+  theme: 'light',
+  sideMenuOpen: false,
 }
 
 interface AppSliceReducer extends SliceCaseReducers<AppSliceState> {
   updateTheme: (
     state: AppSliceState,
-    payload: PayloadAction<themeOptions>,
+    payload: PayloadAction<ThemeOptions>,
   ) => void
   updateGoToAbout: (
     state: AppSliceState,
@@ -29,6 +30,10 @@ interface AppSliceReducer extends SliceCaseReducers<AppSliceState> {
   updateGoToContact: (
     state: AppSliceState,
     payload: PayloadAction<Function>,
+  ) => void
+  updateSideMenuOpen: (
+    state: AppSliceState,
+    payload: PayloadAction<boolean>,
   ) => void
 }
 
@@ -48,6 +53,9 @@ export const appSlice = createSlice<AppSliceState, AppSliceReducer, 'app'>({
     updateGoToContact: (state, action) => {
       state.goToContact = action.payload
     },
+    updateSideMenuOpen: (state, action) => {
+      state.sideMenuOpen = action.payload
+    },
   },
 })
 
@@ -56,6 +64,7 @@ export const {
   updateGoToAbout,
   updateGoToContact,
   updateGoToExperience,
+  updateSideMenuOpen,
 } = appSlice.actions
 
 export default appSlice.reducer
