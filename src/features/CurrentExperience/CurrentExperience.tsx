@@ -32,10 +32,11 @@ export const CurrentExperience: FC = () => {
         </h5>
         <p className="xl:text-xl text-lg mt-6">
           Lead the team to a new technology change, from deprecated to React 18,
-          using hooks, context and redux toolkit.
+          using tailwindCSS, DaisyUI, hooks, context, redux toolkit and
+          TypeScript.
           <br />
-          Improve the performance on the deprecated site from 10 fps when
-          loading to 60 fps.
+          Improve the performance on the deprecated site when loading from 10
+          fps to 60 fps.
           <br />
           Work closely with product and design team, to understand the business
           requirements and prioritize and scope work accordingly, for me and my
